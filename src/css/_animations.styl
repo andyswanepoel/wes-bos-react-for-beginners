@@ -1,0 +1,45 @@
+/*
+  Possible Animations:
+  enter
+  exit
+  appear Must set transitionAppear={true} on animation component
+*/
+
+ul.order
+// order animations
+  .order-enter
+    transform translateX(-120%)
+    max-height 0
+    padding: 0
+    transition 0.5s
+    
+    &.order-enter-active
+      max-height 60px;
+      padding: 2rem 0;
+      transform translateX(0)
+
+  .order-exit
+    max-height 60px;
+    padding: 2rem 0;
+    transition 0.5s
+    
+    &.order-exit-active
+      transform translateX(120%)
+      max-height 0
+      padding: 0
+
+// count animations
+  .count-enter
+    transform translateY(100%)
+    position absolute
+    transition 0.5s
+    
+    &.count-enter-active
+      transform translateY(0)
+
+  .count-exit
+    transform translateY(0)
+    transition 0.5s
+    
+    &.count-exit-active
+      transform translateY(-100%)
